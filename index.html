@@ -1,1638 +1,217 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Broconnect Biz LLP | Digital Marketing Agency</title>
-
-    <meta name="description" content="Broconnect Biz LLP is a professional digital marketing agency in Hyderabad helping businesses grow through digital marketing, SEO, social media, branding and lead generation.">
-
-    <meta name="keywords" content="Broconnect Biz LLP, digital marketing agency Hyderabad, SEO, social media marketing, branding, lead generation, website development">
-
-    <meta name="author" content="Broconnect Biz LLP">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #172033;
-            background: #ffffff;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        /* ================= HEADER ================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.96);
-            border-bottom: 1px solid #e8eaf0;
-            backdrop-filter: blur(10px);
-        }
-
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            padding: 16px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-icon {
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #5b4bff, #00b8ff);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 18px;
-        }
-
-        .logo-text strong {
-            display: block;
-            font-size: 19px;
-            color: #12182a;
-        }
-
-        .logo-text span {
-            font-size: 11px;
-            color: #687087;
-            letter-spacing: 1px;
-        }
-
-        nav {
-            display: flex;
-            gap: 28px;
-            align-items: center;
-        }
-
-        nav a {
-            color: #30384d;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #5b4bff;
-        }
-
-        .nav-btn {
-            background: #5b4bff;
-            color: white !important;
-            padding: 11px 18px;
-            border-radius: 25px;
-        }
-
-        .nav-btn:hover {
-            background: #4335dc;
-        }
-
-        .menu-btn {
-            display: none;
-            font-size: 26px;
-            cursor: pointer;
-        }
-
-        /* ================= HERO ================= */
-
-        .hero {
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            background:
-                radial-gradient(circle at 85% 20%, rgba(91,75,255,0.18), transparent 30%),
-                radial-gradient(circle at 10% 80%, rgba(0,184,255,0.13), transparent 30%),
-                #f7f8ff;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            width: 100%;
-            margin: auto;
-            padding: 80px 24px;
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 8px 15px;
-            border-radius: 30px;
-            background: #ebe9ff;
-            color: #5040df;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(42px, 6vw, 72px);
-            line-height: 1.05;
-            margin-bottom: 24px;
-            color: #12182a;
-        }
-
-        .gradient-text {
-            background: linear-gradient(90deg, #5b4bff, #00aeea);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            max-width: 650px;
-            font-size: 18px;
-            color: #626b80;
-            margin-bottom: 32px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 23px;
-            border-radius: 8px;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: #5b4bff;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            background: #4335dc;
-        }
-
-        .btn-secondary {
-            border: 1px solid #d8dbe7;
-            color: #20283b;
-            background: white;
-        }
-
-        .btn-secondary:hover {
-            border-color: #5b4bff;
-            color: #5b4bff;
-        }
-
-        .hero-card {
-            position: relative;
-            min-height: 430px;
-            border-radius: 30px;
-            background: linear-gradient(145deg, #161d3b, #3026a8);
-            padding: 35px;
-            overflow: hidden;
-            box-shadow: 0 30px 70px rgba(46,39,150,0.25);
-        }
-
-        .hero-card::before {
-            content: "";
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            background: rgba(0,200,255,0.25);
-            top: -80px;
-            right: -60px;
-        }
-
-        .hero-card h3 {
-            color: white;
-            font-size: 30px;
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        .hero-card p {
-            color: #dce1ff;
-            font-size: 15px;
-            position: relative;
-        }
-
-        .growth-box {
-            position: absolute;
-            left: 35px;
-            right: 35px;
-            bottom: 35px;
-            padding: 25px;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.11);
-            border: 1px solid rgba(255,255,255,0.18);
-            color: white;
-        }
-
-        .growth-box .number {
-            font-size: 44px;
-            font-weight: 800;
-        }
-
-        .growth-box span {
-            color: #cfd5ff;
-        }
-
-        /* ================= GENERAL ================= */
-
-        section {
-            padding: 90px 24px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .section-heading {
-            text-align: center;
-            max-width: 720px;
-            margin: 0 auto 55px;
-        }
-
-        .section-heading span {
-            color: #5b4bff;
-            font-weight: 800;
-            font-size: 13px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-
-        .section-heading h2 {
-            font-size: 42px;
-            margin: 12px 0;
-            color: #12182a;
-        }
-
-        .section-heading p {
-            color: #687087;
-        }
-
-        /* ================= ABOUT ================= */
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-content h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .about-content p {
-            color: #626b80;
-            margin-bottom: 18px;
-        }
-
-        .company-box {
-            padding: 35px;
-            border-radius: 25px;
-            background: #f6f7ff;
-            border: 1px solid #e5e7f5;
-        }
-
-        .company-box h3 {
-            margin-bottom: 22px;
-            font-size: 24px;
-        }
-
-        .company-info {
-            display: grid;
-            gap: 15px;
-        }
-
-        .info-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            border-bottom: 1px solid #e1e3ee;
-            padding-bottom: 12px;
-        }
-
-        .info-row strong {
-            color: #30384d;
-        }
-
-        .info-row span {
-            color: #697186;
-            text-align: right;
-        }
-
-        /* ================= SERVICES ================= */
-
-        .services {
-            background: #f8f9fc;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 32px;
-            border-radius: 20px;
-            border: 1px solid #e9eaf1;
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 20px 45px rgba(30,40,80,0.10);
-            border-color: #d9d4ff;
-        }
-
-        .service-icon {
-            width: 55px;
-            height: 55px;
-            border-radius: 15px;
-            background: #eeecff;
-            color: #5545ef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .service-card p {
-            color: #697186;
-            font-size: 14px;
-        }
-
-        /* ================= WHY US ================= */
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .why-card {
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 18px;
-            background: white;
-            border: 1px solid #e9eaf1;
-        }
-
-        .why-card .big-icon {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .why-card h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .why-card p {
-            font-size: 13px;
-            color: #70788b;
-        }
-
-        /* ================= PROCESS ================= */
-
-        .process {
-            background: #10162c;
-            color: white;
-        }
-
-        .process .section-heading h2 {
-            color: white;
-        }
-
-        .process .section-heading p {
-            color: #aeb6d0;
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .process-card {
-            padding: 28px;
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 18px;
-            background: rgba(255,255,255,0.04);
-        }
-
-        .process-number {
-            font-size: 35px;
-            font-weight: 800;
-            color: #6e61ff;
-            margin-bottom: 15px;
-        }
-
-        .process-card h3 {
-            margin-bottom: 8px;
-        }
-
-        .process-card p {
-            color: #adb5ce;
-            font-size: 14px;
-        }
-
-        /* ================= CTA ================= */
-
-        .cta {
-            background: linear-gradient(135deg, #5b4bff, #00a9e8);
-            color: white;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-
-        .cta p {
-            max-width: 650px;
-            margin: 0 auto 30px;
-            color: #e8f7ff;
-        }
-
-        .cta .btn {
-            background: white;
-            color: #4033d8;
-        }
-
-        /* ================= CONTACT ================= */
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 50px;
-        }
-
-        .contact-info h2 {
-            font-size: 40px;
-            margin-bottom: 18px;
-        }
-
-        .contact-info > p {
-            color: #697186;
-            margin-bottom: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 22px;
-        }
-
-        .contact-icon {
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
-            background: #eeecff;
-            color: #5545ef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .contact-item strong {
-            display: block;
-            margin-bottom: 3px;
-        }
-
-        .contact-item span,
-        .contact-item a {
-            color: #687087;
-            font-size: 14px;
-        }
-
-        .contact-form {
-            background: #f7f8fc;
-            padding: 35px;
-            border-radius: 25px;
-            border: 1px solid #e8eaf1;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 7px;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 13px 14px;
-            border: 1px solid #dfe2ea;
-            border-radius: 8px;
-            outline: none;
-            font-family: inherit;
-            background: white;
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: #5b4bff;
-        }
-
-        /* ================= FOOTER ================= */
-
-        footer {
-            background: #090d1b;
-            color: white;
-            padding: 50px 24px 25px;
-        }
-
-        .footer-grid {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        .footer-brand p {
-            color: #929bb5;
-            margin-top: 15px;
-            max-width: 430px;
-            font-size: 14px;
-        }
-
-        footer h3 {
-            margin-bottom: 15px;
-        }
-
-        footer ul {
-            list-style: none;
-        }
-
-        footer li {
-            margin-bottom: 9px;
-        }
-
-        footer a {
-            color: #929bb5;
-            font-size: 14px;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #777f97;
-            font-size: 12px;
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        /* ================= FLOATING WHATSAPP ================= */
-
-        .whatsapp {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background: #25D366;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 27px;
-            z-index: 2000;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-
-        .whatsapp:hover {
-            transform: scale(1.08);
-        }
-
-        /* ================= RESPONSIVE ================= */
-
-        @media (max-width: 900px) {
-
-            nav {
-                display: none;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 76px;
-                background: white;
-                flex-direction: column;
-                padding: 25px;
-                border-bottom: 1px solid #eee;
-            }
-
-            nav.active {
-                display: flex;
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
-            .hero-container,
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                min-height: auto;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .why-grid,
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            section {
-                padding: 65px 18px;
-            }
-
-            .navbar {
-                padding: 13px 18px;
-            }
-
-            .hero-container {
-                padding: 60px 18px;
-            }
-
-            .hero h1 {
-                font-size: 43px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .hero-card {
-                min-height: 340px;
-                padding: 25px;
-            }
-
-            .growth-box {
-                left: 25px;
-                right: 25px;
-                bottom: 25px;
-            }
-
-            .section-heading h2,
-            .about-content h2,
-            .contact-info h2,
-            .cta h2 {
-                font-size: 32px;
-            }
-
-            .services-grid,
-            .why-grid,
-            .process-grid,
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-            }
-
-            .info-row {
-                flex-direction: column;
-                gap: 3px;
-            }
-
-            .info-row span {
-                text-align: left;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<!-- ================= HEADER ================= -->
-
-<header>
-    <div class="navbar">
-
-        <a href="#home" class="logo">
-            <div class="logo-icon">BB</div>
-
-            <div class="logo-text">
-                <strong>Broconnect Biz LLP</strong>
-                <span>DIGITAL MARKETING AGENCY</span>
-            </div>
-        </a>
-
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-        <nav id="navigation">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact" class="nav-btn">Get Started</a>
-        </nav>
-
-    </div>
-</header>
-
-
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-    <div class="hero-container">
-
-        <div>
-
-            <div class="badge">
-                🚀 Digital Growth Partner
-            </div>
-
-            <h1>
-                Grow Your Business
-                <span class="gradient-text">Digitally.</span>
-            </h1>
-
-            <p>
-                Broconnect Biz LLP is a professional digital marketing agency
-                helping businesses build their online presence, generate quality
-                leads and achieve sustainable digital growth.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#contact" class="btn btn-primary">
-                    Start Your Growth
-                </a>
-
-                <a href="#services" class="btn btn-secondary">
-                    Explore Services
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-card">
-
-            <h3>Digital Marketing</h3>
-
-            <p>
-                Strategy • Creativity • Technology • Growth
-            </p>
-
-            <div class="growth-box">
-
-                <div class="number">360°</div>
-
-                <span>
-                    Digital marketing solutions designed
-                    around your business goals.
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-    <div class="container">
-
-        <div class="about-grid">
-
-            <div class="about-content">
-
-                <div class="section-heading" style="text-align:left; margin:0 0 25px 0;">
-                    <span>About Us</span>
-                    <h2>We Help Businesses Connect, Grow & Succeed.</h2>
-                </div>
-
-                <p>
-                    <strong>Broconnect Biz LLP</strong> is a digital marketing
-                    agency focused on helping businesses establish a strong
-                    digital presence and connect with their target customers.
-                </p>
-
-                <p>
-                    From social media and search engine optimization to branding
-                    and lead generation, we provide practical digital solutions
-                    designed to support business growth.
-                </p>
-
-                <a href="#contact" class="btn btn-primary">
-                    Talk to Our Team
-                </a>
-
-            </div>
-
-
-            <div class="company-box">
-
-                <h3>Company Information</h3>
-
-                <div class="company-info">
-
-                    <div class="info-row">
-                        <strong>Company</strong>
-                        <span>Broconnect Biz LLP</span>
-                    </div>
-
-                    <div class="info-row">
-                        <strong>LLPIN</strong>
-                        <span>ACQ-4300</span>
-                    </div>
-
-                    <div class="info-row">
-                        <strong>Business</strong>
-                        <span>Digital Marketing Agency</span>
-                    </div>
-
-                    <div class="info-row">
-                        <strong>Incorporated</strong>
-                        <span>6 August 2025</span>
-                    </div>
-
-                    <div class="info-row">
-                        <strong>Location</strong>
-                        <span>Hyderabad, Telangana</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section class="services" id="services">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>Our Services</span>
-
-            <h2>Digital Solutions For Business Growth</h2>
-
-            <p>
-                We combine strategy, creativity and technology to help your
-                business reach the right audience and create meaningful results.
-            </p>
-
-        </div>
-
-
-        <div class="services-grid">
-
-
-            <div class="service-card">
-
-                <div class="service-icon">📱</div>
-
-                <h3>Social Media Marketing</h3>
-
-                <p>
-                    Build your brand presence across social platforms with
-                    engaging content and targeted campaigns.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">🔍</div>
-
-                <h3>Search Engine Optimization</h3>
-
-                <p>
-                    Improve your online visibility and attract relevant organic
-                    traffic through effective SEO strategies.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">🎯</div>
-
-                <h3>Lead Generation</h3>
-
-                <p>
-                    Create targeted digital campaigns designed to generate
-                    relevant leads and business opportunities.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">🎨</div>
-
-                <h3>Branding & Creative</h3>
-
-                <p>
-                    Build a memorable brand identity with professional creative
-                    design and consistent digital communication.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">💻</div>
-
-                <h3>Website Solutions</h3>
-
-                <p>
-                    Create modern, responsive and business-focused websites
-                    designed for a better digital experience.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">📊</div>
-
-                <h3>Digital Strategy</h3>
-
-                <p>
-                    Develop practical digital strategies based on your business
-                    objectives, audience and growth opportunities.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= WHY CHOOSE US ================= -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>Why Broconnect Biz</span>
-
-            <h2>A Partner Focused On Your Growth</h2>
-
-            <p>
-                We focus on understanding your business before recommending
-                digital marketing solutions.
-            </p>
-
-        </div>
-
-
-        <div class="why-grid">
-
-
-            <div class="why-card">
-
-                <div class="big-icon">🎯</div>
-
-                <h3>Goal Focused</h3>
-
-                <p>
-                    Strategies designed around your business objectives.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <div class="big-icon">💡</div>
-
-                <h3>Creative Ideas</h3>
-
-                <p>
-                    Fresh creative concepts to make your brand stand out.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <div class="big-icon">📈</div>
-
-                <h3>Growth Mindset</h3>
-
-                <p>
-                    Digital campaigns focused on meaningful business growth.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <div class="big-icon">🤝</div>
-
-                <h3>Long-Term Support</h3>
-
-                <p>
-                    We aim to build lasting relationships with our clients.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PROCESS ================= -->
-
-<section class="process" id="process">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>Our Process</span>
-
-            <h2>A Simple Approach To Digital Growth</h2>
-
-            <p>
-                We follow a structured process to understand your requirements
-                and create a practical digital strategy.
-            </p>
-
-        </div>
-
-
-        <div class="process-grid">
-
-
-            <div class="process-card">
-
-                <div class="process-number">01</div>
-
-                <h3>Discover</h3>
-
-                <p>
-                    Understand your business, audience, competitors and goals.
-                </p>
-
-            </div>
-
-
-            <div class="process-card">
-
-                <div class="process-number">02</div>
-
-                <h3>Plan</h3>
-
-                <p>
-                    Create a customized digital marketing strategy.
-                </p>
-
-            </div>
-
-
-            <div class="process-card">
-
-                <div class="process-number">03</div>
-
-                <h3>Execute</h3>
-
-                <p>
-                    Launch campaigns, content and digital initiatives.
-                </p>
-
-            </div>
-
-
-            <div class="process-card">
-
-                <div class="process-number">04</div>
-
-                <h3>Optimize</h3>
-
-                <p>
-                    Monitor performance and continuously improve the strategy.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CTA ================= -->
-
-<section class="cta">
-
-    <div class="container">
-
-        <h2>Ready To Grow Your Business?</h2>
-
-        <p>
-            Let's discuss your digital goals and find the right strategy
-            for your business.
-        </p>
-
-        <a href="#contact" class="btn">
-            Let's Connect
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact">
-
-    <div class="container">
-
-        <div class="contact-grid">
-
-
-            <div class="contact-info">
-
-                <div class="section-heading" style="text-align:left; margin:0 0 25px 0;">
-
-                    <span>Contact Us</span>
-
-                    <h2>Let's Start A Conversation</h2>
-
-                </div>
-
-                <p>
-                    Have a business idea, marketing requirement or digital
-                    growth challenge? Contact Broconnect Biz LLP.
-                </p>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">📞</div>
-
-                    <div>
-                        <strong>Phone</strong>
-                        <a href="tel:+919392095454">
-                            +91 93920 95454
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">✉️</div>
-
-                    <div>
-                        <strong>Email</strong>
-                        <a href="mailto:kamleshjhariya1111@gmail.com">
-                            kamleshjhariya1111@gmail.com
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">📍</div>
-
-                    <div>
-                        <strong>Location</strong>
-                        <span>
-                            Hyderabad, Telangana, India
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">🌐</div>
-
-                    <div>
-                        <strong>Website</strong>
-                        <span>
-                            www.broconnectbiz.com
-                        </span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="contact-form">
-
-                <form onsubmit="sendWhatsApp(event)">
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label>Your Name</label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                placeholder="Enter your name"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label>Phone Number</label>
-
-                            <input
-                                type="tel"
-                                id="phone"
-                                placeholder="Enter phone number"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>Email Address</label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Enter your email"
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>Service Required</label>
-
-                        <select id="service">
-
-                            <option value="Digital Marketing">
-                                Digital Marketing
-                            </option>
-
-                            <option value="Social Media Marketing">
-                                Social Media Marketing
-                            </option>
-
-                            <option value="SEO">
-                                SEO
-                            </option>
-
-                            <option value="Lead Generation">
-                                Lead Generation
-                            </option>
-
-                            <option value="Branding">
-                                Branding & Creative
-                            </option>
-
-                            <option value="Website">
-                                Website Solutions
-                            </option>
-
-                            <option value="Other">
-                                Other
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label>Message</label>
-
-                        <textarea
-                            id="message"
-                            placeholder="Tell us about your requirement..."
-                            required
-                        ></textarea>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="btn btn-primary"
-                        style="border:0; cursor:pointer; width:100%;"
-                    >
-                        Send Enquiry on WhatsApp
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-grid">
-
-
-        <div class="footer-brand">
-
-            <div class="logo">
-
-                <div class="logo-icon">BB</div>
-
-                <div class="logo-text">
-
-                    <strong style="color:white;">
-                        Broconnect Biz LLP
-                    </strong>
-
-                    <span style="color:#929bb5;">
-                        DIGITAL MARKETING AGENCY
-                    </span>
-
-                </div>
-
-            </div>
-
-            <p>
-                Helping businesses build stronger digital brands,
-                connect with customers and unlock new growth opportunities.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h3>Quick Links</h3>
-
-            <ul>
-
-                <li><a href="#home">Home</a></li>
-
-                <li><a href="#about">About Us</a></li>
-
-                <li><a href="#services">Services</a></li>
-
-                <li><a href="#process">Our Process</a></li>
-
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-
-        </div>
-
-
-        <div>
-
-            <h3>Contact</h3>
-
-            <ul>
-
-                <li>
-                    <a href="tel:+919392095454">
-                        +91 93920 95454
-                    </a>
-                </li>
-
-                <li>
-                    <a href="mailto:kamleshjhariya1111@gmail.com">
-                        Email Us
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contact">
-                        Hyderabad, Telangana
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <span>
-            © 2026 Broconnect Biz LLP. All Rights Reserved.
-        </span>
-
-        <span>
-            LLPIN: ACQ-4300
-        </span>
-
-    </div>
-
-</footer>
-
-
-<!-- ================= WHATSAPP ================= -->
-
-<a
-    class="whatsapp"
-    href="https://wa.me/919392095454"
-    target="_blank"
-    aria-label="Chat with Broconnect Biz LLP on WhatsApp"
->
-    💬
-</a>
-
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script>
-
-    function toggleMenu() {
-
-        const nav = document.getElementById("navigation");
-
-        nav.classList.toggle("active");
-
-    }
-
-
-    function sendWhatsApp(event) {
-
-        event.preventDefault();
-
-        const name =
-            document.getElementById("name").value;
-
-        const phone =
-            document.getElementById("phone").value;
-
-        const email =
-            document.getElementById("email").value;
-
-        const service =
-            document.getElementById("service").value;
-
-        const message =
-            document.getElementById("message").value;
-
-
-        const whatsappMessage =
-            "Hello Broconnect Biz LLP,%0A%0A" +
-
-            "Name: " + encodeURIComponent(name) + "%0A" +
-
-            "Phone: " + encodeURIComponent(phone) + "%0A" +
-
-            "Email: " + encodeURIComponent(email) + "%0A" +
-
-            "Service: " + encodeURIComponent(service) + "%0A" +
-
-            "Requirement: " + encodeURIComponent(message);
-
-
-        const whatsappURL =
-            "https://wa.me/919392095454?text=" +
-            whatsappMessage;
-
-
-        window.open(
-            whatsappURL,
-            "_blank"
-        );
-
-    }
-
-</script>
-
-</body>
-</html>
+Broconnect Biz LLP
+Home
+About
+Services
+Packages
+Process
+Contact
+DIGITAL MARKETING AGENCY • HYDERABAD
+Grow Your Business.
+Build Your Brand.
+Go Digital.
+Broconnect Biz LLP helps businesses build a stronger digital presence through strategy, creative marketing, lead generation and measurable growth solutions.
+
+Get Free Consultation →
+💬 WhatsApp Us
+DIGITAL GROWTH DASHBOARD
++128%
+Reach & engagement growth
+ABOUT US
+Digital growth with a business-first approach.
+We combine creative thinking, data and technology to help brands attract customers and build lasting digital visibility.
+
+Meet Broconnect Biz LLP
+Broconnect Biz LLP is a Hyderabad-based digital marketing agency focused on practical, result-oriented digital solutions for businesses of different sizes.
+
+2025
+Established
+ACQ-4300
+LLPIN
+Hyderabad
+Telangana
+Our Digital Marketing Services
+Everything your business needs to attract, engage and convert customers in the digital world.
+
+📣
+Social Media Marketing
+Build your brand presence across social platforms with content, campaigns and community engagement.
+
+🔎
+Search Engine Optimization
+Improve search visibility with on-page, technical and content-focused SEO.
+
+📢
+Google & Meta Ads
+Reach high-intent customers with targeted paid advertising and campaign optimization.
+
+🎯
+Lead Generation
+Generate and nurture quality business enquiries through digital campaigns and landing strategies.
+
+✍️
+Content Marketing
+Create useful, persuasive content that builds trust and supports customer acquisition.
+
+🌐
+Website Design & Development
+Professional, responsive websites designed to support your brand and business goals.
+
+🎨
+Branding & Creative
+Build a consistent visual identity with graphics, creatives and campaign assets.
+
+🎬
+Video & Reels Marketing
+Short-form video concepts and creative direction designed for digital engagement.
+
+📍
+Local SEO
+Improve your local online presence and help nearby customers discover your business.
+
+💬
+WhatsApp Marketing
+Use conversational campaigns and enquiry journeys to connect with prospects.
+
+📊
+Digital Strategy
+Create a practical digital roadmap aligned with your audience, budget and growth goals.
+
+🚀
+Business Growth Consulting
+Identify opportunities across digital channels and build a scalable marketing approach.
+
+Why Choose Broconnect?
+A professional partner focused on your business goals—not just vanity metrics.
+
+🎯
+Goal-Focused
+Marketing plans designed around your business objectives and target audience.
+
+📈
+Data-Driven
+Use performance insights to improve campaigns, content and lead generation.
+
+🤝
+Dedicated Support
+Clear communication and ongoing support to keep your digital growth moving.
+
+Monthly Digital Marketing Packages
+Choose a package based on your growth stage. Need something different? We can build a customized plan.
+
+Basic
+₹9,999 + GST
+18% GST • Monthly
+✓ Digital strategy
+✓ Social media support
+✓ Content planning
+✓ Monthly reporting
+Get Started
+MOST POPULAR
+Premium
+₹25,000 + GST
+18% GST • Monthly
+✓ Multi-channel marketing
+✓ SEO & social media
+✓ Lead generation
+✓ Campaign optimization
+Choose Premium
+Enterprise
+₹40,000 + GST
+18% GST • Monthly
+✓ Comprehensive strategy
+✓ Paid ads management
+✓ Advanced lead generation
+✓ Performance reporting
+Talk to Us
+Customized
+Custom Quote
+Tailored to your requirements
+✓ Flexible scope
+✓ Custom services
+✓ Business-specific goals
+✓ Dedicated consultation
+Request Quote
+All listed prices are exclusive of 18% GST. Final scope and deliverables are agreed before engagement.
+
+How We Work
+A simple, transparent process designed to turn digital activity into business growth.
+
+01
+Discover
+Understand your business, market and goals.
+
+02
+Strategize
+Create a customized growth roadmap.
+
+03
+Execute
+Launch content, campaigns and marketing.
+
+04
+Optimize
+Monitor performance and improve results.
+
+05
+Grow
+Scale what works and build momentum.
+
+Client Feedback
+A dedicated section for genuine client feedback. Replace the placeholders below with verified testimonials as you collect them.
+
+“
+Our business needed a stronger digital presence. We are looking forward to building a consistent marketing system with Broconnect.
+
+Business Client
+Testimonial placeholder
+“
+The customized approach and clear communication make it easier to understand where our marketing investment is going.
+
+Growth Client
+Testimonial placeholder
+“
+A professional space to plan our online growth, content and lead generation under one digital strategy.
+
+Marketing Client
+Testimonial placeholder
+LET'S TALK
+Ready to grow digitally?
+Tell us about your business and goals. Our team can help you identify the right digital marketing approach.
+
+📞 Phone
+9392095454
+✉️ Email
+kamleshjhariya1111@gmail.com
+📍 Office
+Sy. No.-246/1, Manikonda Jagir Village, Hyderabad, Telangana
+💬 Start WhatsApp Chat
+Request a Consultation
+Your Name *
+Phone *
+Email
+Business Name
+Service Required
+
+Digital Marketing
+Message
+Tell us briefly about your business and requirement...
+
+Send Enquiry on WhatsApp →
+Broconnect Biz LLP
+Digital Marketing Agency
+Grow Your Business. Build Your Brand. Go Digital.
+
+LLPIN: ACQ-4300
+
+Established: 6 August 2025
+
+Hyderabad, Telangana
+
+Contact
+
+9392095454
+
+kamleshjhariya1111@gmail.com
+
+© 2025–2026 Broconnect Biz LLP. All rights reserved.
+💬 WhatsApp
