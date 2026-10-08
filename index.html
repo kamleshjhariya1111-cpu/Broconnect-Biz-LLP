@@ -1,28 +1,467 @@
-Broconnect-Biz-LLP-GitHub-Website/
-├── index.html
-├── about.html
-├── services.html
-├── website-design-development.html
-├── social-media-marketing.html
-├── seo.html
-├── performance-marketing.html
-├── branding.html
-├── content-creative.html
-├── lead-generation.html
-├── marketing-automation.html
-├── pricing.html
-├── live-projects.html
-├── process.html
-├── contact.html
-├── faq.html
-├── README.md
-├── .nojekyll
-└── assets/
-    ├── css/
-    │   └── style.css
-    ├── js/
-    │   └── main.js
-    ├── images/
-    │   └── README.txt
-    └── video/
-        └── README.txt
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broconnect Biz LLP | Digital Marketing Agency</title>
+    <meta name="description" content="Building Brands. Connecting Businesses. Creating Growth. Complete digital marketing solutions for growing businesses.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0F172A',
+                            accent: '#2563EB',
+                            accentHover: '#1D4ED8',
+                            light: '#F8FAFC',
+                            text: '#334155'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Top Contact Bar -->
+    <div class="bg-slate-900 text-slate-300 text-xs sm:text-sm py-2 px-4 sm:px-8 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <a href="tel:9392095454" class="hover:text-blue-400 transition"><i class="fas fa-phone mr-2 text-blue-500"></i>+91 9392095454</a>
+                <a href="mailto:kamleshjhariya1111@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope mr-2 text-blue-500"></i>kamleshjhariya1111@gmail.com</a>
+            </div>
+            <div class="text-slate-400">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Manikonda Jagir, Hyderabad, Telangana
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    B
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold text-slate-900 tracking-tight block leading-none">BROCONNECT</span>
+                    <span class="text-xs text-blue-600 font-semibold tracking-widest uppercase">BIZ LLP</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-700">
+                <a href="#about" class="hover:text-blue-600 transition">About Us</a>
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#pricing" class="hover:text-blue-600 transition">Pricing</a>
+                <a href="#process" class="hover:text-blue-600 transition">Process</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:shadow-lg transition">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" class="md:hidden text-slate-700 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-4">
+            <a href="#about" class="block text-slate-700 hover:text-blue-600 font-medium py-1">About Us</a>
+            <a href="#services" class="block text-slate-700 hover:text-blue-600 font-medium py-1">Services</a>
+            <a href="#pricing" class="block text-slate-700 hover:text-blue-600 font-medium py-1">Pricing</a>
+            <a href="#process" class="block text-slate-700 hover:text-blue-600 font-medium py-1">Process</a>
+            <a href="#contact" class="block text-slate-700 hover:text-blue-600 font-medium py-1">Contact</a>
+            <a href="#contact" class="block text-center bg-blue-600 text-white py-2.5 rounded-lg font-semibold">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 text-white py-24 px-4 sm:px-8 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase inline-block mb-6">
+                BROCONNECT BIZ LLP
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                Building Brands. Connecting Businesses. <span class="text-blue-500">Creating Growth.</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                We combine strategy, creativity, technology, and performance-driven digital marketing to help businesses move from simply being online to becoming visible, credible, and competitive.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-lg shadow-lg hover:shadow-blue-500/25 transition text-center">
+                    Get Started
+                </a>
+                <a href="https://wa.me/919392095454" target="_blank" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold px-8 py-4 rounded-lg transition flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-green-500 text-xl"></i> Talk to Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Banner -->
+    <section class="py-16 bg-white border-b border-slate-200 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Your Business Deserves More Than Just an Online Presence</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    In today's digital-first marketplace, having a website or social media account is not enough. Businesses need a clear brand identity, professional online presence, targeted marketing, and a strategy focused on measurable growth.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl mb-4"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Business-Focused</h3>
+                    <p class="text-slate-600 text-sm">We focus on your business objectives—not simply on delivering individual marketing activities.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl mb-4"><i class="fas fa-chess"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Customized Strategies</h3>
+                    <p class="text-slate-600 text-sm">Your business is unique. We create solutions based on your industry, audience, competition, and goals.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl mb-4"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Growth-Oriented</h3>
+                    <p class="text-slate-600 text-sm">Our goal is to help businesses build stronger brands, reach the right audiences, generate opportunities, and grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">What We Do</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4">Complete Digital Marketing Solutions</h2>
+                <p class="text-slate-600">Designed to help your brand attract attention, build trust, generate enquiries, and grow.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Website Design & Dev</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">Create a professional website that clearly communicates your business and converts visitors into leads.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Business Websites & Landing Pages</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Mobile-Responsive Design</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>WhatsApp & Form Integrations</li>
+                    </ul>
+                    <span class="text-sm font-bold text-slate-900 block">Starting from ₹9,999</span>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-hashtag"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Social Media Marketing</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">Build an active and professional presence across social platforms where your customers spend time.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Content Strategy & Calendars</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Creative Graphic Posts</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Account Management & Analytics</li>
+                    </ul>
+                    <span class="text-sm font-bold text-slate-900 block">Starting from ₹7,999 / mo</span>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-search"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Search Engine Optimization</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">Improve your online visibility and help potential customers discover your business through search.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Keyword Research & On-Page SEO</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Local SEO & Google Business Profile</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Search Performance Monitoring</li>
+                    </ul>
+                    <span class="text-sm font-bold text-slate-900 block">Starting from ₹6,999 / mo</span>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-ad"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Performance Marketing</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">Reach the right audience through targeted digital advertising campaigns across Google and Social Media.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Lead Generation Campaigns</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Audience Targeting & Setup</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Campaign Monitoring & Optimization</li>
+                    </ul>
+                    <span class="text-sm font-bold text-slate-900 block">Starting from ₹7,999 / mo</span>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Branding & Identity</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">Build a professional and consistent brand identity that represents your business effectively.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Logo Design & Visual Identity</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Typography & Brand Guidelines</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Marketing Collateral Templates</li>
+                    </ul>
+                    <span class="text-sm font-bold text-slate-900 block">Starting from ₹7,999</span>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-robot"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">WhatsApp & Automation</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">Design digital communication and automation workflows to engage and manage incoming customer leads.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>WhatsApp API Integration</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Automated Enquiries & Lead Alerts</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Basic CRM Workflows</li>
+                    </ul>
+                    <span class="text-sm font-bold text-slate-900 block">Starting from ₹9,999</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Pricing Calculator / Packages Section -->
+    <section id="pricing" class="py-20 bg-white px-4 sm:px-8 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Services & Charges</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4">Transparent Growth Packages</h2>
+                <p class="text-slate-600">Choose an all-in-one digital marketing package or customize a plan around your budget.</p>
+            </div>
+
+            <!-- Standard Packages -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Package 1 -->
+                <div class="border border-slate-200 rounded-2xl p-8 relative flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Starter Growth</h3>
+                        <p class="text-slate-500 text-sm mb-6">Ideal for businesses establishing their initial digital presence.</p>
+                        <div class="text-3xl font-extrabold text-slate-900 mb-6">₹24,999 <span class="text-xs font-normal text-slate-500">starting</span></div>
+                        <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Starter Website (5 Pages)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Social Media Setup & Optimization</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Branding Essentials (Logo & Palette)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Google Business Profile Setup</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full text-center bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition">Select Package</a>
+                </div>
+
+                <!-- Package 2 (Featured) -->
+                <div class="border-2 border-blue-600 rounded-2xl p-8 relative flex flex-col justify-between shadow-xl bg-slate-900 text-white">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs uppercase font-bold tracking-widest py-1 px-4 rounded-full">Most Popular</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Business Growth</h3>
+                        <p class="text-slate-400 text-sm mb-6">Website, content, social media, and active marketing support.</p>
+                        <div class="text-3xl font-extrabold mb-6">₹49,999 <span class="text-xs font-normal text-slate-400">starting</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-blue-400 mr-2"></i> Professional Business Website</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-400 mr-2"></i> Monthly Social Media Marketing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-400 mr-2"></i> Local & Business SEO Management</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-400 mr-2"></i> Lead Generation Campaign Setup</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition shadow-lg">Select Package</a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="border border-slate-200 rounded-2xl p-8 relative flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Complete Digital</h3>
+                        <p class="text-slate-500 text-sm mb-6">Comprehensive strategy across multiple channels with ongoing lead optimization.</p>
+                        <div class="text-3xl font-extrabold text-slate-900 mb-6">₹99,999+ <span class="text-xs font-normal text-slate-500">starting</span></div>
+                        <ul class="space-y-3 text-sm text-slate-600 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Custom Web App / E-commerce</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Full Performance Marketing Management</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> Complete Brand Identity Suite</li>
+                            <li class="flex items-center"><i class="fas fa-check text-blue-600 mr-2"></i> WhatsApp Marketing & CRM Automation</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full text-center bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition">Select Package</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology & Process Section -->
+    <section id="process" class="py-20 bg-slate-900 text-white px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">How We Help Your Business</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4">From Idea to Digital Growth</h2>
+                <p class="text-slate-400">Our 6-step structured approach keeps projects focused and aligned with business objectives.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <span class="text-blue-500 font-extrabold text-2xl mb-2 block">01</span>
+                    <h3 class="text-xl font-bold mb-2">Understand</h3>
+                    <p class="text-slate-400 text-sm">We learn about your business, target audience, competitors, current digital presence, and objectives.</p>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <span class="text-blue-500 font-extrabold text-2xl mb-2 block">02</span>
+                    <h3 class="text-xl font-bold mb-2">Strategize</h3>
+                    <p class="text-slate-400 text-sm">We develop a practical digital strategy based on your specific business goals and market opportunities.</p>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <span class="text-blue-500 font-extrabold text-2xl mb-2 block">03</span>
+                    <h3 class="text-xl font-bold mb-2">Build</h3>
+                    <p class="text-slate-400 text-sm">We create or improve the essential digital assets required to establish a strong online foundation.</p>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <span class="text-blue-500 font-extrabold text-2xl mb-2 block">04</span>
+                    <h3 class="text-xl font-bold mb-2">Promote</h3>
+                    <p class="text-slate-400 text-sm">We use relevant digital channels to reach your target audience and generate awareness and enquiries.</p>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <span class="text-blue-500 font-extrabold text-2xl mb-2 block">05</span>
+                    <h3 class="text-xl font-bold mb-2">Optimize</h3>
+                    <p class="text-slate-400 text-sm">We continuously evaluate performance and identify concrete opportunities to improve campaign results.</p>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <span class="text-blue-500 font-extrabold text-2xl mb-2 block">06</span>
+                    <h3 class="text-xl font-bold mb-2">Grow</h3>
+                    <p class="text-slate-400 text-sm">Our objective is to build a sustainable digital foundation that supports long-term business growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Enquiry Section -->
+    <section id="contact" class="py-20 bg-slate-50 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Left Details Column -->
+                <div>
+                    <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Contact Us</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-6">Let's Talk About Your Business</h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Have a project in mind, need help with your digital presence, or want to understand which digital marketing solution is right for your business? Connect with our team today.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl shrink-0"><i class="fas fa-building"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">BROCONNECT BIZ LLP</h4>
+                                <p class="text-slate-600 text-sm">Digital Marketing Agency</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl shrink-0"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Registered Office</h4>
+                                <p class="text-slate-600 text-sm">Sy. No. 246/1, Manikonda Jagir Village, Hyderabad, Telangana, India</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl shrink-0"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Phone & WhatsApp</h4>
+                                <p class="text-slate-600 text-sm">+91 9392095454</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl shrink-0"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Email Address</h4>
+                                <p class="text-slate-600 text-sm">kamleshjhariya1111@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Column -->
+                <div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-md">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Start a Conversation</h3>
+                    <form id="enquiryForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Full Name *</label>
+                            <input type="text" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Business / Company Name</label>
+                            <input type="text" placeholder="Enter your business name" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Email Address *</label>
+                                <input type="email" required placeholder="Enter your email" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Phone Number *</label>
+                                <input type="tel" required placeholder="Enter contact number" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Service Required</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm bg-white">
+                                <option>Website Design & Development</option>
+                                <option>Social Media Marketing</option>
+                                <option>SEO Solutions</option>
+                                <option>Performance Marketing</option>
+                                <option>Branding & Visual Identity</option>
+                                <option>Content & Creative Design</option>
+                                <option>Lead Generation Systems</option>
+                                <option>WhatsApp & Automation</option>
+                                <option>Customized Digital Growth Package</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Tell Us About Your Requirement</label>
+                            <textarea rows="4" placeholder="Briefly explain your project, goals, or requirements" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg transition shadow-md">
+                            Submit Enquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 sm:px-8 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <span class="text-white font-bold text-lg">BROCONNECT BIZ LLP</span>
+                <p class="text-xs text-slate-500 mt-1">Building Brands. Connecting Businesses. Creating Growth.</p>
+            </div>
+            <div class="text-xs text-slate-500">
+                &copy; 2026 BROCONNECT BIZ LLP. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form Submit Handler
+        document.getElementById('enquiryForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for reaching out to Broconnect Biz LLP! Our team will get back to you shortly.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
