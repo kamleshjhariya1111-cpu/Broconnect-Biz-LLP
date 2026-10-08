@@ -1,0 +1,7 @@
+broconnect-biz-website/
+├── index.html            # Main site code (HTML + Tailwind + JavaScript)
+├── assets/
+│   ├── images/           # Logo, icons, background images
+│   └── docs/             # Brochures, proposals, PDFs
+├── .gitignore            # Files to ignore in git tracking
+└── README.md             # Official repository README
